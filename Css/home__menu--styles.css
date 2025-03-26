@@ -144,6 +144,10 @@ i.fa-bars, i.fa-xmark{
     width: 100%;
   }
 
+  .span.logo-side-right {
+  display:none;
+}
+
   .contact-menu__container{
     align-items: center;
     display: flex;
