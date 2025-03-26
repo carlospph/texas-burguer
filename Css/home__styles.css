@@ -1,0 +1,204 @@
+/* importando font do google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* resertando elementos do html, todos */
+* {
+
+  box-sizing: border-box;
+  font-family: "Poppins";
+  font-size: 14px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+:root {
+
+  --b-shadow: 0px 5px 4px rgba(0, 0, 0, 0.3);
+
+  --color-danger: crimson;
+  --color-default: rgb(241, 244, 175);
+  --color-dark: black;
+  --color-light: white;
+
+  --font-16: 16px;
+  --font-17: 17px;
+  --font-18: 18px;
+  --font-19: 19px;
+  --font-20: 20px;
+  --font-21: 21px;
+  --font-22: 22px;
+  --font-23: 23px;
+  --font-24: 24px;
+  --font-25: 25px;
+  --font-26: 26px;
+  --font-27: 27px;
+  --font-28: 28px;
+  --font-29: 29px;
+  --font-30: 30px;
+  --font-31: 31px;
+  --font-32: 32px;
+
+  --font-40: 40px;
+  --font-45: 45px;
+  --font-50: 50px;
+  --font-55: 55px;
+  --font-60: 60px;
+
+  --padding-5: .5rem;
+  --padding-10: 1rem;
+  --padding-15: 1.5rem;
+  --padding-20: 2rem;
+  --padding-30: 3rem;
+  --padding-50: 5rem;
+}
+
+header {
+  background: var(--color-default);
+  box-shadow: var(--b-shadow);
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 0 var(--padding-10);
+}
+
+.brand {
+  color: var(--color-default);
+  display: flex;
+  align-items: center;
+}
+
+span.logo-side-left {
+  color: brown;
+}
+
+span.logo-side-right {
+  color: var(--color-danger)
+}
+
+.brand span {
+  text-decoration: none;
+  font-size: var(--font-25);
+  font-weight: 900;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  text-transform: capitalize;
+  padding: var(--padding-5) var(--padding-15);
+
+}
+
+.nav-link:hover {
+  background: var(--color-danger);
+  color: var(--color-light);
+  transition: .4s ease;
+}
+
+i.fa-bars, i.fa-xmark{
+  display: none;
+}
+
+.btn-link {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  gap: 4px;
+  text-transform: capitalize;
+  padding: var(--padding-5) var(--padding-10);
+}
+
+.btn-link:hover{
+  opacity: .8;
+}
+
+.btn-outline-danger {
+  border: 1px solid var(--color-danger);
+}
+
+.btn-solid-danger{
+  background: var(--color-danger);
+  color: var(--color-light);
+}
+
+
+.icone__link__mobile{
+  display: none;
+}
+
+@media (max-width: 789px){
+
+  header{
+    position: fixed;
+    width: 100%;
+  }
+
+  .contact-menu__container{
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+  } 
+
+  .window-menu{
+    top: 100%;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.1);
+    transition: .8s;
+  }
+
+  .show{
+    right: 0;
+  }
+
+  .menu{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: pink;
+    width: 50%;
+    height: 100%;
+    padding-top: var(--padding-20);
+  }
+
+  .menu li a{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .menu li a img{
+    width: 20px;
+    height: auto;
+  }
+
+
+  .nav-link{
+    display: block;
+    color: var(--color-dark);
+  }
+
+  .icone__link__mobile{
+    display: flex;
+  }
+
+  i.fa-bars, i.fa-xmark{
+    display: block;
+    cursor: pointer;
+    font-size: var(--font-32);
+  }
+
+}
