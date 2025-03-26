@@ -3,7 +3,6 @@
 
 /* resertando elementos do html, todos */
 * {
-
   box-sizing: border-box;
   font-family: "Poppins";
   font-size: 14px;
@@ -13,10 +12,12 @@
   text-decoration: none;
 }
 
+/*variáveis - sombra, cores, paddings, fontes, */
 :root {
 
   --b-shadow: 0px 5px 4px rgba(0, 0, 0, 0.3);
 
+--color-chocolate: brown;
   --color-danger: crimson;
   --color-default: rgb(241, 244, 175);
   --color-dark: black;
@@ -54,11 +55,15 @@
   --padding-50: 5rem;
 }
 
+/*cabeçalho da página - to computer*/
 header {
   background: var(--color-default);
   box-shadow: var(--b-shadow);
+    position: fixed;
+    width: 100%;
 }
 
+/*serve de container - envelope o logo, menu e o botão - COMPUTER */
 .navbar {
   align-items: center;
   display: flex;
@@ -68,47 +73,58 @@ header {
   padding: 0 var(--padding-10);
 }
 
+/*logo marca do site */
 .brand {
   color: var(--color-default);
   display: flex;
   align-items: center;
 }
 
+/*lado esquerdo [texas] da logo marca */
 span.logo-side-left {
-  color: brown;
+  color: var(--color-chocolate);
 }
 
+/*lado esquerdo [burguer] da logo marca */
 span.logo-side-right {
   color: var(--color-danger)
 }
 
+/*span da logomarca */
 .brand span {
   text-decoration: none;
   font-size: var(--font-25);
   font-weight: 900;
 }
 
+/*menu principal */
 .menu {
   display: flex;
   gap: 1rem;
 }
 
+/*cada link do menu principal - computer*/
 .nav-link {
   text-transform: capitalize;
   padding: var(--padding-5) var(--padding-15);
+  font-size: var(--font-16);
+  color: var(--color-chocolate);
 
 }
 
+/*efeito ao passar o mouse no link */
 .nav-link:hover {
   background: var(--color-danger);
   color: var(--color-light);
   transition: .4s ease;
 }
 
+/* icones menu-hamburguer e fechar menu */
 i.fa-bars, i.fa-xmark{
   display: none;
 }
 
+/* botão padrao [formato link] sem efeito */
 .btn-link {
   display: flex;
   align-items: center;
@@ -119,41 +135,46 @@ i.fa-bars, i.fa-xmark{
   padding: var(--padding-5) var(--padding-10);
 }
 
+/* botão padrao [formato link] ao passar o mouse efeito */
 .btn-link:hover{
   opacity: .8;
 }
 
+/* botao com borda vermelha e transparente*/
 .btn-outline-danger {
   border: 1px solid var(--color-danger);
 }
 
+/* botao cor sólida vermelha e transparente */
 .btn-solid-danger{
   background: var(--color-danger);
   color: var(--color-light);
 }
 
-
+/* icones do menu que é mostrado apenas no mobile */
 .icone__link__mobile{
   display: none;
 }
 
-@media (max-width: 789px){
+/* ------------- ----------- --------- TELAS MOBILE - abaixo de 789px*/
+@media (max-width: 840px){
 
-  header{
-    position: fixed;
-    width: 100%;
-  }
 
-  .span.logo-side-right {
+ 
+
+/*ocultar o ['burguer da logo marca'] - mobile */
+  span.logo-side-right {
   display:none;
 }
 
+/*container envelopa o botão conatto e o menu-hamburguer*/
   .contact-menu__container{
     align-items: center;
     display: flex;
     gap: 1rem;
   } 
 
+/*janela cinza que o menu está dentro */
   .window-menu{
     top: 100%;
     right: -100%;
@@ -164,10 +185,12 @@ i.fa-bars, i.fa-xmark{
     transition: .8s;
   }
 
+/* classe que faz a apresentação do menu lateral*/
   .show{
     right: 0;
   }
 
+/*tratando o menu lateral*/
   .menu{
     display: flex;
     flex-direction: column;
@@ -178,27 +201,27 @@ i.fa-bars, i.fa-xmark{
     padding-top: var(--padding-20);
   }
 
+/*para alinhar o icone e o termo do link no menu lateral */
   .menu li a{
     display: flex;
     align-items: center;
     gap: 6px;
   }
+ 
 
-  .menu li a img{
-    width: 20px;
-    height: auto;
-  }
-
-
+/* deixando o link ocupar todo o espaço   em block*/
   .nav-link{
     display: block;
     color: var(--color-dark);
+    font-size: var(--font-18);
   }
 
+/* mostrar o icone no menu lateal */
   .icone__link__mobile{
     display: flex;
   }
 
+  /*tratando os icones [menu-hamburguer & fechar menu {x} */
   i.fa-bars, i.fa-xmark{
     display: block;
     cursor: pointer;
