@@ -5,10 +5,10 @@ const window__menu = document.querySelector('.window-menu')
 btn__menu.addEventListener('click', ()=>{
   if(window__menu.classList.contains('show')){
     window__menu.classList.remove('show')
-    btn__menu.setAttribute('class', 'fa-solid fa-xmark')
+    btn__menu.setAttribute('class', 'fa-solid fa-bars')
   }
   else{
     window__menu.classList.add('show')
-    btn__menu.setAttribute('class', 'fa-solid fa-bars')
+    btn__menu.setAttribute('class', 'fa-solid fa-xmark')
   }
 })
