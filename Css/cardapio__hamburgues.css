@@ -1,0 +1,52 @@
+.cardapio{
+    padding: 80px 0 40px;
+    background: rgb(243, 225, 85);
+}
+
+
+.cardapio__container--cards{
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.cardapio .card{
+    margin: .5rem;
+    border: 2px solid salmon;
+    background-color: aliceblue;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.cardapio .card .price{
+    background: tomato;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top:0;
+    right: 0;
+    padding: 0 6px 0 1rem;
+    border-radius: 0 0 0 20px;
+}
+
+
+.cardapio .card .img{
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
+@media (min-width:769px){
+    .cardapio__container--cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+}

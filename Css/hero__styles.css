@@ -1,0 +1,74 @@
+.hero {
+    padding-top: var(--padding-50);
+    background-image: url("https://images.pexels.com/photos/15523379/pexels-photo-15523379/free-photo-of-almoco-refeicao-fotografia-de-alimentos-fotografia-de-comida.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-repeat: no-repeat;
+    background-position: right;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    position: relative;
+}
+
+.hero__container {
+    max-width: 1024px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(33, 49, 63, 0.243);
+    z-index: -1;
+}
+
+.hero__title {
+    font-size: 50px;
+}
+
+.hero__container--buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 45px;
+ }
+
+.link-btn {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 10px 30px;
+    font-size: var(--font-20);
+    cursor: pointer;
+    z-index: 3;
+}
+
+.link-btn:hover {
+    opacity: .8;
+}
+
+.outline-light {
+    border: 1px solid white;
+}
+
+.outline-light--hero {
+    color: white;
+}
+
+.solid-light {
+    background: whitesmoke;
+    color: crimson;
+}
+
+@media (max-width:569px){
+    .link-btn{
+        font-size: 16px;
+        padding: .4rem 1rem;
+    }
+
+}

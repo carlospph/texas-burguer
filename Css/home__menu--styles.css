@@ -1,6 +1,11 @@
 /* importando font do google */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+/* importar os demais css */
+@import url(hero__styles.css);
+@import url(cardapio__hamburgues.css);
+
 /* resertando elementos do html, todos */
 * {
   box-sizing: border-box;
@@ -61,6 +66,7 @@ header {
   box-shadow: var(--b-shadow);
     position: fixed;
     width: 100%;
+    z-index: 5;
 }
 
 /*serve de container - envelope o logo, menu e o botão - COMPUTER */
@@ -196,7 +202,7 @@ i.fa-bars, i.fa-xmark{
     flex-direction: column;
     gap: 0;
     background: pink;
-    width: 50%;
+    width: 100%;
     height: 100%;
     padding-top: var(--padding-20);
   }
